@@ -40,19 +40,19 @@ private:
 	static int handlePEHaltRestart(unsigned int type);
 
 public:
-	virtual bool init(OSDictionary *properties);
-	virtual IOService *probe(IOService *provider, SInt32 *score);
-	virtual bool start(IOService *provider);
-	virtual bool configure(IOService *provider);
+	virtual bool init(OSDictionary *properties) APPLE_KEXT_OVERRIDE;
+	virtual IOService *probe(IOService *provider, SInt32 *score) APPLE_KEXT_OVERRIDE;
+	virtual bool start(IOService *provider) APPLE_KEXT_OVERRIDE;
+	virtual bool configure(IOService *provider) APPLE_KEXT_OVERRIDE;
 	virtual bool matchNubWithPropertyTable(IOService *nub, OSDictionary *table);
-	virtual IOService *createNub(OSDictionary *from);
+	virtual IOService *createNub(OSDictionary *from) APPLE_KEXT_OVERRIDE;
 	virtual bool reserveSystemInterrupt(IOService *client, UInt32 vectorNumber, bool exclusive);
 	virtual void releaseSystemInterrupt(IOService *client, UInt32 vectorNumber, bool exclusive);
 	virtual bool setNubInterruptVectors(IOService *nub, const UInt32 vectors[], UInt32 vectorCount);
 	virtual bool setNubInterruptVector(IOService *nub, UInt32 vector);
-	virtual IOReturn callPlatformFunction(const OSSymbol *functionName, bool waitForFunction, void *param1, void *param2, void *param3, void *param4);
-	virtual bool getModelName(char *name, int maxLengh);
-	virtual bool getMachineName(char *name, int maxLength);
+	virtual IOReturn callPlatformFunction(const OSSymbol *functionName, bool waitForFunction, void *param1, void *param2, void *param3, void *param4) APPLE_KEXT_OVERRIDE;
+	virtual bool getModelName(char *name, int maxLengh) APPLE_KEXT_OVERRIDE;
+	virtual bool getMachineName(char *name, int maxLength) APPLE_KEXT_OVERRIDE;
 };
 
 #endif /* ! _IOKIT_APPLEI386PLATFORM_H */
