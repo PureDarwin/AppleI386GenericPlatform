@@ -253,7 +253,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					/System/Library/Frameworks/Kernel.framework/PrivateHeaders,
+					"$(RC_BuildRoot)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /System/Library/Extensions;
@@ -317,7 +317,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					/System/Library/Frameworks/Kernel.framework/PrivateHeaders,
+					"$(RC_BuildRoot)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /System/Library/Extensions;
