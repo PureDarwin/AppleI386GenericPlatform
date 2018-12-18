@@ -263,7 +263,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					"$(inherited)",
+					"$(DEPROOT)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
 				);
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -326,7 +326,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					"$(inherited)",
+					"$(DEPROOT)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
 				);
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
