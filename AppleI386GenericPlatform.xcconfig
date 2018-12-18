@@ -1,0 +1,4 @@
+#include? "darwinbuild.xcconfig"
+
+// Keep this here, so Xcode doesn't complain about it.
+INSTALL_PATH = /System/Library/Extensions

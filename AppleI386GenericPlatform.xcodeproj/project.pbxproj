@@ -11,6 +11,7 @@
 		1FC13F321F4A75DF006E9F05 /* AppleI386CPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC13F2D1F4A75DE006E9F05 /* AppleI386CPU.cpp */; };
 		1FC13F331F4A75DF006E9F05 /* AppleI386CPU.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC13F2E1F4A75DE006E9F05 /* AppleI386CPU.h */; };
 		1FC13F341F4A75DF006E9F05 /* AppleI386PlatformExpert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC13F2F1F4A75DF006E9F05 /* AppleI386PlatformExpert.cpp */; };
+		1FC2772021C890E8005BF421 /* AppleI386GenericPlatform.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1FC13F2D1F4A75DE006E9F05 /* AppleI386CPU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleI386CPU.cpp; sourceTree = "<group>"; };
 		1FC13F2E1F4A75DE006E9F05 /* AppleI386CPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleI386CPU.h; sourceTree = "<group>"; };
 		1FC13F2F1F4A75DF006E9F05 /* AppleI386PlatformExpert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleI386PlatformExpert.cpp; sourceTree = "<group>"; };
+		1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = AppleI386GenericPlatform.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 				1FC13F2D1F4A75DE006E9F05 /* AppleI386CPU.cpp */,
 				1FC13F2C1F4A75DE006E9F05 /* AppleI386PlatformExpert.h */,
 				1FC13F2F1F4A75DF006E9F05 /* AppleI386PlatformExpert.cpp */,
+				1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */,
 				1FC13F2B1F4A75DE006E9F05 /* Info.plist */,
 				1FC13F211F4A75CF006E9F05 /* Products */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC2772021C890E8005BF421 /* AppleI386GenericPlatform.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,7 @@
 /* Begin XCBuildConfiguration section */
 		1FC13F011F4A7485006E9F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -175,6 +180,7 @@
 		};
 		1FC13F021F4A7485006E9F05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -257,10 +263,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					"$(RC_BuildRoot)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = /System/Library/Extensions;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.puredarwin.AppleI386GenericPlatform;
 				MODULE_VERSION = 1.0.0d1;
@@ -321,10 +326,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/LocalHeaders",
-					"$(RC_BuildRoot)/System/Library/Frameworks/Kernel.framework/PrivateHeaders",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = /System/Library/Extensions;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.puredarwin.AppleI386GenericPlatform;
 				MODULE_VERSION = 1.0.0d1;
