@@ -2,3 +2,8 @@
 
 // Keep this here, so Xcode doesn't complain about it.
 INSTALL_PATH = /System/Library/Extensions
+
+// Override these values with an empty string, to prevent the
+// compiler from picking up user-mode headers and libraries.
+SYSTEM_HEADER_SEARCH_PATHS =
+FRAMEWORK_SEARCH_PATHS =
