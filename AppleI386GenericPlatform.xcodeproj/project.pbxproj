@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F78918C22653AC300C76853 /* darwinbuild-codesign.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "darwinbuild-codesign.plist"; sourceTree = "<group>"; };
 		1FC13F201F4A75CF006E9F05 /* AppleI386GenericPlatform.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleI386GenericPlatform.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC13F2B1F4A75DE006E9F05 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC13F2C1F4A75DE006E9F05 /* AppleI386PlatformExpert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleI386PlatformExpert.h; sourceTree = "<group>"; };
@@ -34,6 +35,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F78918B22653AB100C76853 /* Build Support */ = {
+			isa = PBXGroup;
+			children = (
+				1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */,
+				1F78918C22653AC300C76853 /* darwinbuild-codesign.plist */,
+			);
+			name = "Build Support";
+			sourceTree = "<group>";
+		};
 		1FC13EFC1F4A7485006E9F05 = {
 			isa = PBXGroup;
 			children = (
@@ -41,8 +51,8 @@
 				1FC13F2D1F4A75DE006E9F05 /* AppleI386CPU.cpp */,
 				1FC13F2C1F4A75DE006E9F05 /* AppleI386PlatformExpert.h */,
 				1FC13F2F1F4A75DF006E9F05 /* AppleI386PlatformExpert.cpp */,
-				1FC2771F21C890E8005BF421 /* AppleI386GenericPlatform.xcconfig */,
 				1FC13F2B1F4A75DE006E9F05 /* Info.plist */,
+				1F78918B22653AB100C76853 /* Build Support */,
 				1FC13F211F4A75CF006E9F05 /* Products */,
 			);
 			sourceTree = "<group>";
