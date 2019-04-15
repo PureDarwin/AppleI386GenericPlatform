@@ -3,3 +3,4 @@
 *.xccheckout
 
 LocalHeaders/
+darwinbuild.xcconfig
