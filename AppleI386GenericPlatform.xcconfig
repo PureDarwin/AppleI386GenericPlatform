@@ -5,5 +5,5 @@ INSTALL_PATH = /System/Library/Extensions
 
 // Override these values with an empty string, to prevent the
 // compiler from picking up user-mode headers and libraries.
-SYSTEM_HEADER_SEARCH_PATHS =
+SYSTEM_HEADER_SEARCH_PATHS = $(DEPROOT)/System/Library/Frameworks/Kernel.framework/PrivateHeaders $(DEPROOT)/System/Library/Frameworks/Kernel.framework/Headers
 FRAMEWORK_SEARCH_PATHS =
