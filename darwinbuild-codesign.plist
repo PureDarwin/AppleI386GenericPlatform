@@ -4,16 +4,11 @@
 <dict>
 	<key>certificate</key>
 	<string>Apple Development</string>
-	<key>prefix</key>
-	<string>org.puredarwin</string>
 
 	<key>files</key>
 	<dict>
 		<key>/System/Library/Extensions/AppleI386GenericPlatform.kext</key>
-		<dict>
-			<key>identifier</key>
-			<string>org.puredarwin.kext.AppleI386GenericPlatform</string>
-		</dict>
+		<true/>
 	</dict>
 </dict>
 </plist>
