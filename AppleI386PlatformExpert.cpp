@@ -86,9 +86,15 @@ IOService *AppleI386PlatformExpert::probe(IOService *provider, SInt32 *score) {
 bool AppleI386PlatformExpert::init(OSDictionary *properties) {
 	if (!super::init()) return false;
 
+	bool needs_free = false;
 	OSString *name = (OSString *)getProperty("InterruptControllerName");
-	if (name == 0) name = OSString::withCStringNoCopy("AppleI386CPUInterruptController");
+	if (name == 0) {
+		name = OSString::withCStringNoCopy("AppleI386CPUInterruptController");
+		needs_free = true;
+	}
+
 	_interruptControllerName = OSSymbol::withString(name);
+	if (needs_free) name->release();
 
 	return true;
 }
