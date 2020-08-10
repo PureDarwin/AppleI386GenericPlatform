@@ -28,11 +28,15 @@
 #include <IOKit/platform/ApplePlatformExpert.h>
 #include <libkern/c++/OSContainers.h>
 #include <libkern/c++/OSUnserialize.h>
-#include <pexpert/i386/boot.h>
 
 extern "C" {
+#if defined(__ARM__)
+#include <pexpert/arm/protos.h>
+#else
 #include <i386/cpuid.h>
 #include <pexpert/i386/protos.h>
+#include <pexpert/i386/boot.h>
+#endif
 }
 
 #include "AppleI386PlatformExpert.h"
@@ -225,6 +229,10 @@ int AppleI386PlatformExpert::handlePEHaltRestart(unsigned int type) {
 
 	switch (type) {
 		case kPERestartCPU:
+#if defined(__ARM__)
+			// Not yet implemented.
+			ret = -1
+#else
 			// Note: This code may or may not work reliably on all systems.
 			// The original author of it indicated that it should work on any
 			// system with a compliant PCI controller.
@@ -240,6 +248,7 @@ int AppleI386PlatformExpert::handlePEHaltRestart(unsigned int type) {
 
 			// This should not be reached, but just in case...
 			break;
+#endif
 
 		case kPEHaltCPU:
 		default:
