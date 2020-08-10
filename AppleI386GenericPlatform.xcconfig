@@ -2,6 +2,7 @@
 
 // Keep this here, so Xcode doesn't complain about it.
 INSTALL_PATH = /System/Library/Extensions
+ARCHS = x86_64
 
 // Override these values with an empty string, to prevent the
 // compiler from picking up user-mode headers and libraries.
